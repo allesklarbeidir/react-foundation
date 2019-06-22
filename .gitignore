@@ -1,5 +1,5 @@
 .idea
-lib
+#lib
 coverage
 node_modules
 *.log
