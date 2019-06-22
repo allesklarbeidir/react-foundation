@@ -43,6 +43,12 @@ describe('GridContainer component', () => {
     expect(component).to.have.className('align-center');
     expect(component).to.not.have.prop('alignX');
   });
+
+  it('sets flexbox "align-self-[top|middle|bottom|stretch]" class name', () => {
+    const component = shallow(<GridContainer selfAlignY="middle"/>);
+    expect(component).to.have.className('align-self-middle');
+    expect(component).to.not.have.prop('selfAlignY');
+  });
 });
 
 describe('Grid component', () => {
@@ -116,6 +122,11 @@ describe('Grid component', () => {
     const component = render(<Grid collapseOnLarge={GutterTypes.PADDING}/>);
     expect(component).to.have.className('large-padding-collapse');
     expect(component).to.not.have.attr('collapseOnLarge');
+  });
+
+  it('sets grid frame for ExtendedBreakpoints.ALL if omitted', () => {
+    const component = render(<Grid gridFrame={ExtendedBreakpoints.ALL}/>);
+    expect(component).to.have.className('grid-frame');
   });
 
   it('sets grid frame', () => {

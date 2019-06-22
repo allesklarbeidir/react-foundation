@@ -186,6 +186,8 @@ export function flexboxClassNames(props) {
     'align-center-middle': props.centerAlign,
     [`align-${props.alignX}`]: props.alignX,
     [`align-${props.alignY}`]: props.alignY,
+    [`align-self-${props.selfAlignX}`]: props.selfAlignX,
+    [`align-self-${props.selfAlignY}`]: props.selfAlignY,
     [addBreakpoint('flex-dir-row', props.flexDirRow)]: props.flexDirRow,
     [addBreakpoint('flex-dir-row-reverse', props.flexDirRowRev)]: props.flexDirRowRev,
     [addBreakpoint('flex-dir-column', props.flexDirCol)]: props.flexDirCol,

@@ -62,7 +62,7 @@ export const Grid = (props) => {
     isDefined(props.collapseOnSmall) ? `small-${props.collapseOnSmall}-collapse` : null,
     isDefined(props.collapseOnMedium) ? `medium-${props.collapseOnMedium}-collapse` : null,
     isDefined(props.collapseOnLarge) ? `large-${props.collapseOnLarge}-collapse` : null,
-    isDefined(props.gridFrame) ? addBreakpoint('grid-frame', props.gridFrame) : null,
+    isDefined(props.gridFrame) ? (props.gridFrame === true ? 'grid-frame' : addBreakpoint('grid-frame', props.gridFrame)) : null,
     generalClassNames(props),
     flexboxClassNames(props)
   );
